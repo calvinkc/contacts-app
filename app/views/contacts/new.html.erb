@@ -1,10 +1,19 @@
-<%= form_tag "/new_contact_result", method: :post do %>
+<%= form_tag "/contacts", method: :post do %>
   <div>
     First name <input type="text" name="first">
   </div>
   <div>
     Last name <input type="text" name="last">
   </div>
-  <input type="submit" value="Create Name">
+  <div>
+    Relationship <input type="text" name="relationship">
+  </div>
+  <div>
+    Number <input type="text" name="number">
+  </div> 
+  <div>
+    Email <input type="text" name="email">
+  </div> 
+  <input type="submit" value="Create Contact">
 <% end %>
 

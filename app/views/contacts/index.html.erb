@@ -1,8 +1,11 @@
-<H1> Here are some contacts </H1>
-<H2> <%= @contact.first %> </H2>
-<H2> <%= @contact.last %> </H2>
-<% @contacts.each do |contact| %>
-    <h3> First name: <%= contact.first %></h3>
-<% end%> 
+<h1> Index: Here are all the contacts </h1>
 
-<button type="button" class="btn btn-primary">Primary</button>
+<% @contacts.each do |contact| %>
+<h3> First name: <%= contact.first %> </h3>
+<h3> Last Name: <%= contact.last %> </h3>
+<h3> Relationship: <%= contact.relationship %> </h3>
+<h3> Phone #: <%= contact.number %> </h3>
+<h3> E-mail :<%= contact.email %> </h3>
+<br>
+<br>
+<% end%> 
