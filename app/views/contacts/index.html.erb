@@ -1,7 +1,7 @@
 <h1> Index: Here are all the contacts </h1>
 
 <% @contacts.each do |contact| %>
-<h3> First name: <%= contact.first %> </h3>
+<h3> <a href="/contacts/<%=contact.id%>"> First name: <%= contact.first %></a> </h3>
 <h3> Last Name: <%= contact.last %> </h3>
 <h3> Relationship: <%= contact.relationship %> </h3>
 <h3> Phone #: <%= contact.number %> </h3>
