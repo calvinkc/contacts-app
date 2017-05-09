@@ -1,22 +1,22 @@
 class ContactsController < ApplicationController
 
-  def contact_method
+  def index
     @contact = Contact.last #returns has
     @contacts = Contact.all #ret ary of has
     #@contact = Contact.all.sample
-    render "contacts.html.erb"
+    render "index.html.erb"
   end
 
-  def new_contact_form
-    render "new_contact_form.html.erb"
+  def new
+    render "new.html.erb"
   end
 
-  def new_contact_result
+  def create
     @new_contact = Contact.create(
       first: params[:contact_first], 
       last: params[:contact_last]
       )
-    render "new_contact_result.html.erb"
+    render "create.html.erb"
   end
 
 
