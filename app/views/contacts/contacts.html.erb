@@ -1,0 +1,8 @@
+<H1> Here are some contacts </H1>
+<H2> <%= @contact.first %> </H2>
+<H2> <%= @contact.last %> </H2>
+<% @contacts.each do |contact| %>
+    <h3> First name: <%= contact.first %></h3>
+<% end%> 
+
+<button type="button" class="btn btn-primary">Primary</button>
