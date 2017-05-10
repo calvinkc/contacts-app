@@ -4,3 +4,8 @@
 <h3> Relationship: <%= @contact.relationship %> </h3>
 <h3> Phone #: <%= @contact.number %> </h3>
 <h3> E-mail :<%= @contact.email %> </h3>
+
+<%= form_tag "/contacts/#{@contact.id}", method: :delete do %>
+  <input type="submit" value="Delete this Entry">
+<% end %>
+
