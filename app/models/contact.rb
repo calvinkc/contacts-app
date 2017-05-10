@@ -11,4 +11,5 @@ class Contact < ApplicationRecord
     @full_number = "+81 " + number.to_s
   end
 
+
 end
