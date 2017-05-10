@@ -9,3 +9,7 @@
   <input type="submit" value="Delete this Entry">
 <% end %>
 
+
+<%= button_to "Button_To: Edit Entry", {action: "edit", id: @contact.id}, method: :get %>
+
+<%= button_to "Button_To:_With_Warning: Delete Entry", {action: "destroy", id: @contact.id}, method: :delete, data: { confirm: "Are you sure?" } %>
