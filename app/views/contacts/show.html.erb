@@ -1,15 +1,25 @@
+
+<div class="container">
 <h1> Show: Here is ONE of the contact </h1>
+
 <h3> First name: <%= @contact.first %> </h3>
 <h3> Last Name: <%= @contact.last %> </h3>
+
+<!-- Add a full_name method to their own contacts app. -->
+<h3> Full name: <%= @contact.full_name %> </h3>
+
 <h3> Relationship: <%= @contact.relationship %> </h3>
-<h3> Phone #: <%= @contact.number %> </h3>
+<h3> Phone #: <%= @contact.full_number %> </h3>
 <h3> E-mail :<%= @contact.email %> </h3>
+
+<!-- Add the time to each show page that show when a contact has been updated with a “friendly” format. -->
+<h5>Created: <%= @contact.friendly_created_at %></h5>
 
 <%= form_tag "/contacts/#{@contact.id}", method: :delete do %>
   <input type="submit" value="Delete this Entry">
 <% end %>
 
-
 <%= button_to "Button_To: Edit Entry", {action: "edit", id: @contact.id}, method: :get %>
 
 <%= button_to "Button_To:_With_Warning: Delete Entry", {action: "destroy", id: @contact.id}, method: :delete, data: { confirm: "Are you sure?" } %>
+</div>
