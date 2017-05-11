@@ -4,12 +4,16 @@ class Contact < ApplicationRecord
   end
 
   def full_name
-    @full_name = first + " " + last
+   # @full_name = first + " " + last
+    return "#{first} #{last}"
   end
 
   def full_number
-    @full_number = "+81 " + number.to_s
+   "+81 #{number}" 
   end
 
-
+  def self.find_all_johns
+    Contact.where(first: "John")
+  end
+  
 end
