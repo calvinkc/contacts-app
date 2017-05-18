@@ -1,6 +1,7 @@
 class Contact < ApplicationRecord
 
   geocoded_by :full_street_address
+  belongs_to :user
   
   def friendly_created_at
     created_at.strftime("%b %e, %l:%M %p")
