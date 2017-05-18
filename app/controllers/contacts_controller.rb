@@ -53,10 +53,11 @@ class ContactsController < ApplicationController
     render "destroy.html.erb"
   end  
 
-  def coordinates(string)
+  def coordinates(string) 
     @coordinates = Geocoder.coordinates(string)
 # Ex: “1441 W Carmen Ave, Chicago, IL”). And coordinates is an array of latitude and longitude.
-    
+    @latitude = @coordinates[0]
+    @longitude = @coordinates[1]
   end
 
 
